@@ -12,7 +12,7 @@ const Register = () => {
     const onFinish =async(values)=>{
       try {
          dispatch(showLoading())
-         const res=await axios.post('/api/v1/user/register',values);
+         const res=await axios.post('https://doctor-appointment-server-as6t.onrender.com/api/v1/user/register',values);
          dispatch(hideLoading())
          if(res.data.success){
             message.success('Registered Sucessfully')

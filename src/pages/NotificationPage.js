@@ -13,7 +13,7 @@ const NotificationPage = () => {
     const handleRead=async()=>{
 try {
     dispatch(showLoading())
-    const res=await axios.post('/api/v1/user/get-all-notification',{userId : user._id},{
+    const res=await axios.post('https://doctor-appointment-server-as6t.onrender.com/api/v1/user/get-all-notification',{userId : user._id},{
         headers :{
             Authorization : `Bearer ${localStorage.getItem('token')}`
         }

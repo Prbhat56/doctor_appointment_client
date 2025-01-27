@@ -6,7 +6,7 @@ const Doctors = () => {
     const [doctors ,setDoctors]=useState([])
     const getUsers=async()=>{
         try {
-           const res=await axios.get('/api/v1/admin/getAllDoctors',{
+           const res=await axios.get('https://doctor-appointment-server-as6t.onrender.com/api/v1/admin/getAllDoctors',{
                headers :{
                    Authorization : `Bearer ${localStorage.getItem('token')}`
                }

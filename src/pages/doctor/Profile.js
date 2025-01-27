@@ -17,7 +17,7 @@ const Profile = () => {
   
   const getDoctorInfo = async()=>{
    try {
-    const res=await axios.post('/api/v1/doctor/getDoctorInfo',{userId : params.id},{
+    const res=await axios.post('https://doctor-appointment-server-as6t.onrender.com/api/v1/doctor/getDoctorInfo',{userId : params.id},{
       headers :{
         Authorization : `Bearer ${localStorage.getItem('token')}`
     }

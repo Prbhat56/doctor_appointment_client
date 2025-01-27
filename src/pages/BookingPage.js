@@ -21,7 +21,7 @@ const BookingPage = () => {
                 return alert('Date and Time required')
             }
             dispatch(showLoading())
-            const res=await axios.post('/api/v1/user/book-appointment',
+            const res=await axios.post('https://doctor-appointment-server-as6t.onrender.com/api/v1/user/book-appointment',
             {
                 doctorId :params.doctorId,
                 userId : user._id,
